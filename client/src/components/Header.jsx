@@ -23,10 +23,18 @@ const Header = () => {
 
         {/* pages */}
         <div className="space-x-5 text-xl font-semibold mt-3  text-sky-200 hidden sm:flex  ">
-          <Link className="focus:underline">Home</Link>
-          <Link>Menu</Link>
-          <Link>Cart</Link>
-          <Link>About</Link>
+          <Link to={"/"} className="focus:underline">
+            Home
+          </Link>
+          <Link to={"/menu"} className="focus:underline">
+            Menu
+          </Link>
+          <Link to={"/cart"} className="focus:underline">
+            Cart
+          </Link>
+          <Link to={"/about"} className="focus:underline">
+            About
+          </Link>
         </div>
 
         {/* searchbar */}
@@ -36,7 +44,10 @@ const Header = () => {
               className="hidden sm:inline text-slate-300 mt-2"
               size={28}
             />
-            <button className="absolute hidden sm:inline top-1 left-3 bg-red-500 p-1 rounded-full" type=""></button>
+            <button
+              className="absolute hidden sm:inline top-1 left-3 bg-red-500 p-1 rounded-full"
+              type=""
+            ></button>
           </div>
           <Profile />
         </div>

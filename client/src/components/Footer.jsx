@@ -12,10 +12,10 @@ const Footer = () => {
           <div className="flex flex-col">
             <h1 className="text-xl font-semibold">Navigation Links</h1>
             <div className="flex flex-col gap-1 text-lg">
-              <Link>Home</Link>
-              <Link>Menu</Link>
-              <Link>Cart</Link>
-              <Link>About</Link>
+              <Link to={'/'}>Home</Link>
+              <Link to={'/menu'}>Menu</Link>
+              <Link to={'/cart'}>Cart</Link>
+              <Link to={'/about'}>About</Link>
             </div>
           </div>
           {/* social media links */}
