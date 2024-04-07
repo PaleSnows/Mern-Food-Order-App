@@ -1,8 +1,11 @@
 import React from 'react'
+import Search from './extras/Search'
 
 const Cart = () => {
   return (
-    <div>Cart</div>
+    <div>
+     
+    </div>
   )
 }
 
