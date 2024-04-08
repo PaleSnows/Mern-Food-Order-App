@@ -1,22 +1,26 @@
-import { configureStore,combineReducer } from "@reduxjs/toolkit";
-import  useReducer  from "./user/userSlice";
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import  userReducer  from "./slices/userSlice";
 import storage from 'redux-persist/lib/storage';
 import { persistReducer, persistStore } from 'redux-persist';
+import sliderSlice from "./slices/sliderSlice";
 
-const rootReducer = combineReducer({user:useReducer})
+// const rootReducer = combineReducers({user:userReducer,slider:sliderSlice})
 
-const persistConfig = {
-  key:"root",
-  storage,
-  version:1
-}
+// const persistConfig = {
+//   key:"root",
+//   storage,
+//   version:1
+// }
 
-const persistedReducer = persistReducer(persistConfig,rootReducer)
+// const persistedReducer = persistReducer(persistConfig,rootReducer)
 
 export const store = configureStore({
-  reducer: persistedReducer,
+  reducer: {
+    user:userReducer,
+    slider:sliderSlice
+  },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({ serializableCheck: false }),
 });
 
-export const perisistor = persistStore(store)
+// export const perisistor = persistStore(store)

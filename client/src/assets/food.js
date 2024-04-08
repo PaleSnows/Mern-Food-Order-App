@@ -91,7 +91,7 @@ let food = [
   },
   {
     id: 12,
-    name: "ORange juice",
+    name: "Orange juice",
     category: "Drinks",
     image: f12,
     price: 1.25,
