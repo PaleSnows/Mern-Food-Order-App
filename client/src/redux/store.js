@@ -3,6 +3,7 @@ import  userReducer  from "./slices/userSlice";
 import storage from 'redux-persist/lib/storage';
 import { persistReducer, persistStore } from 'redux-persist';
 import sliderSlice from "./slices/sliderSlice";
+import filterSlice from "./slices/productSLice";
 
 // const rootReducer = combineReducers({user:userReducer,slider:sliderSlice})
 
@@ -17,7 +18,8 @@ import sliderSlice from "./slices/sliderSlice";
 export const store = configureStore({
   reducer: {
     user:userReducer,
-    slider:sliderSlice
+    slider:sliderSlice,
+    filter:filterSlice
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({ serializableCheck: false }),
