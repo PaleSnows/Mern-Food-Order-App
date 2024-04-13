@@ -5,6 +5,7 @@ import Menu from "./pages/Menu";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Cart from "./pages/Cart";
+import Registration from "./pages/Registration";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/about" element={<About />} />
+          <Route path="/register" element={<Registration />} />
         </Routes>
         <Footer />
       </BrowserRouter>
