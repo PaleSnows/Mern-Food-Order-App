@@ -3,6 +3,7 @@ import food from "../../assets/food";
 
 const initialState = {
   filteredProducts: "",
+  singleProduct: "",
 };
 
 const productSlice = createSlice({
@@ -15,9 +16,21 @@ const productSlice = createSlice({
           (product) => product.category === action.payload
         );
         state.filteredProducts = filter;
+        console.log(filter);
         const saveState = JSON.stringify(filter);
-        sessionStorage.setItem("saveState");
+        sessionStorage.setItem("saveState", saveState);
       } catch (error) {
+        return error;
+      }
+    },
+    singleProduct: (state, action) => {
+      try {
+        const oneProduct = food.filter(
+          (product) => product.id === action.payload
+        );
+        state.singleProduct = oneProduct
+      } catch (error) {
+        console.log(error);
         return error;
       }
     },
